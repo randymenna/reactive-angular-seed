@@ -1,0 +1,5 @@
+<div>
+    <input type="text" placeholder="Add task.." [formControl]="control">
+    <button (click)="add.next(control.value);control.reset()">Add</button>
+</div>
+

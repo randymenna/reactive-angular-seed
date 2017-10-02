@@ -1,0 +1,8 @@
+<div>
+    <p *ngIf="(taskState$ | async)?.loading">LOADING!</p>
+    <h3>{{(taskState$ | async)?.taskListTitle}}</h3>
+    <task-list [tasks]="(taskState$ | async)?.tasks" (toggle)="toggle($event)"></task-list>
+    <p *ngIf="(taskState$ | async)?.error">{{(taskState$ | async)?.error}}</p>
+
+    <add-task (add)="addTask($event)"></add-task>
+</div>

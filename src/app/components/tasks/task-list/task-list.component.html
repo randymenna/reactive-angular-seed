@@ -1,0 +1,3 @@
+<ul *ngFor="let task of tasks">
+    <task-item [task]="task" (toggle)="toggle.next($event)"></task-item>
+</ul>
