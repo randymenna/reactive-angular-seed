@@ -9,14 +9,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from '../environments/environment';
 
-import { reducers } from './app.store';
-import { TaskEffects } from './store/task/task.effects';
+import { reducers } from './store/store.reducers';
+import { effects } from './store/store.effects';
 
 import { TasksModule } from './components/tasks/tasks.module';
 
 import { AppComponent} from './app.component';
 
-import { TaskService } from './services/task-service/task.service';
+import { TaskService } from './store/services/task-service/task.service';
 
 @NgModule({
     declarations: [
@@ -30,7 +30,7 @@ import { TaskService } from './services/task-service/task.service';
         FormsModule,
         ReactiveFormsModule,
         TasksModule,
-        EffectsModule.forRoot([TaskEffects])
+        EffectsModule.forRoot(effects)
     ],
     providers: [
         TaskService

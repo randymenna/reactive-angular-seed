@@ -7,7 +7,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/catch';
 
-import { GET_TASKS, ADD_TASK, ITask, tasksLoad, tasksLoadError, taskClearNew, IAddTaskAction } from '../../app.store';
+import { GET_TASKS, ADD_TASK, tasksLoad, tasksLoadError, taskClearNew, IAddTaskAction } from './task.actions';
+import { ITask } from './task.model';
 
 @Injectable()
 export class TaskEffects {

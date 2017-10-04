@@ -7,7 +7,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskComponent } from './task-item/task-item.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 
-import { TaskService } from '../../services/task-service/task.service';
+import { TaskService } from '../../store/services/task-service/task.service';
 
 @NgModule({
     imports: [

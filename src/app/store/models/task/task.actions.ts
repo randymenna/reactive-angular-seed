@@ -1,5 +1,5 @@
 import {Action} from '@ngrx/store';
-import {uuid} from '../../util/uuid';
+import {uuid} from '../../../util/uuid';
 import {ITask, TaskFilter} from './task.model';
 
 // These are all the actions that can be performed on the Tasks state

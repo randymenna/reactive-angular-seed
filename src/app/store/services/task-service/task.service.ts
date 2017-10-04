@@ -4,10 +4,10 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/map';
 
-import * as AppStore from '../../app.store';
+import { ITask } from '../../models/task/task.model';
 
 // mock data
-const testTasks: Array<AppStore.ITask> = [
+const testTasks: Array<ITask> = [
     {
         id: '1',
         created: new Date(),
@@ -28,12 +28,12 @@ export class TaskService {
     constructor() {
     }
 
-    getTasks(): Observable<Array<AppStore.ITask>> {
+    getTasks(): Observable<Array<ITask>> {
         return Observable.of(testTasks).delay(2000)
             .map(result => result);
     }
 
-    addTask(task: AppStore.ITask) {
+    addTask(task: ITask) {
         // send the new task-item to the server
         return Observable.of(task).delay(2000)
             .map(result => result);

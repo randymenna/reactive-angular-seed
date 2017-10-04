@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+/* these are really ugly, but just a poc of scss */
+
+$header-background-color:    #f07c05;
+$story-title-color:          #f07c05;
+$unfocused-background-color: #f1f0ec;
+
+$thick-border:               8px solid black;
+$dotted-border:              1px dotted #999999;
+$text-color:                 #555555;
+$light-text-color:           #a0a0a0;
+
+body {
+  background: $unfocused-background-color;
+  color: $text-color;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+  font-size: 16px;
+}

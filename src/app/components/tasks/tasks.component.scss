@@ -1,0 +1,24 @@
+@import "~styles.scss";
+
+#task-list {
+  background: $header-background-color;
+
+  h3 {
+    color: white;
+  }
+
+  ul {
+    padding: 0 0 0 25px;
+    li {
+      padding: 0 20px 0 0;
+      text-transform: uppercase;
+      a {
+        color: #febf0f;
+        text-decoration: none;
+        width: 100px;
+        height: 72px;
+        display: block;
+      }
+    }
+  }
+}

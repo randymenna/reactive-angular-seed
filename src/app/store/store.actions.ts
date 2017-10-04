@@ -1,2 +1,2 @@
-export * from './task/task.actions';
+export * from './models/task/task.actions';
 

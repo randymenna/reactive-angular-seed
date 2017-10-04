@@ -1,2 +1,2 @@
-export * from './task/task.model';
+export * from './models/task/task.model';
 

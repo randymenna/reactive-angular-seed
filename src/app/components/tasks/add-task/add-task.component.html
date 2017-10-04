@@ -1,5 +1,9 @@
-<div>
-    <input type="text" placeholder="Add task.." [formControl]="control">
-    <button (click)="add.next(control.value);control.reset()">Add</button>
+<div class="add-task">
+    <input class="input-margins" type="text" placeholder="Add task.." [formControl]="control">
+    <div class="button-container">
+        <button class="pumpkin-flat-button" (click)="add.next(control.value);control.reset()">
+            <span>press me</span>
+        </button>
+    </div>
 </div>
 

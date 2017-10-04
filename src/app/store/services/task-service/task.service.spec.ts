@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import * as AppStore from '../../app.store';
+import * as AppStore from '../../../app.store';
 import { TaskService } from './task.service';
 
 const testTask: AppStore.ITask = {
