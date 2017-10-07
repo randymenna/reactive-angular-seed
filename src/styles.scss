@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* these are really ugly, but just a poc of scss */
 
-$header-background-color:    #f07c05;
-$story-title-color:          #f07c05;
+$header-background-color:    #0a93c7;
+$title-background-color:     #3498db;
+$container-background-color: #f0f0f0;
+$story-title-color:          #0a93c7;
 $unfocused-background-color: #f1f0ec;
+$list-item-color:            #0a93c7;
+$list-item-hover-background: #d6d4d4;
+$list-item-number-color:     #3498db;
 
 $thick-border:               8px solid black;
 $dotted-border:              1px dotted #999999;
@@ -21,7 +26,13 @@ input {
   border-bottom: 1px dashed #83A4C5;
   width: 275px;
   outline: none;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   font-style: italic;
   font-size: 16px;
+}
+
+@mixin center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

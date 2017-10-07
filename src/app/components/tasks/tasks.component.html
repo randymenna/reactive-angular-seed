@@ -1,10 +1,22 @@
-<div>
-    <div id="task-list">
-        <p *ngIf="(taskState$ | async)?.loading">LOADING!</p>
-        <h3>{{(taskState$ | async)?.taskListTitle}}</h3>
-        <task-list [tasks]="(taskState$ | async)?.tasks" (toggle)="toggle($event)"></task-list>
-        <p *ngIf="(taskState$ | async)?.error">{{(taskState$ | async)?.error}}</p>
+<div id="task" class="task__container">
+    <div class="task__container--unloaded" *ngIf="(taskState$ | async)?.loading">
+        loading ...
     </div>
 
-    <add-task (add)="addTask($event)"></add-task>
+    <div *ngIf="!(taskState$ | async)?.loading" class="task__container--loaded">
+        <div class="task__title">
+            {{(taskState$ | async)?.taskListTitle}}
+        </div>
+
+        <task-list [tasks]="(taskState$ | async)?.tasks" (toggle)="toggle($event)"></task-list>
+
+        <div class="task__error" *ngIf="(taskState$ | async)?.error">
+            {{(taskState$ | async)?.error}}
+        </div>
+
+        <div class="task__controls">
+            <add-task (add)="addTask($event)"></add-task>
+        </div>
+    </div>
+
 </div>

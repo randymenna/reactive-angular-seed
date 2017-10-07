@@ -1,24 +1,39 @@
 @import "~styles.scss";
 
-#task-list {
-  background: $header-background-color;
+.task {
+  &__container {
+    padding: 10px;
+    
 
-  h3 {
-    color: white;
-  }
+    &--loaded {
+      background: $container-background-color;
+    }
 
-  ul {
-    padding: 0 0 0 25px;
-    li {
-      padding: 0 20px 0 0;
-      text-transform: uppercase;
-      a {
-        color: #febf0f;
-        text-decoration: none;
-        width: 100px;
-        height: 72px;
-        display: block;
-      }
+    &--unloaded {
+      background: $unfocused-background-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
+  
+  &__title {
+    width: 25%;
+    background: $title-background-color;
+    color: white;
+    border-radius: 3px;
+    @include center;
+  }
+
+  &__error {
+    @include center;
+    color: red;
+  }
+
+  &__controls {
+    margin: auto;
+    text-align: center;
+    width: 25%;
+  }
 }
+

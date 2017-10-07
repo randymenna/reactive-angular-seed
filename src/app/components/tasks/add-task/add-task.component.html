@@ -1,8 +1,8 @@
 <div class="add-task">
-    <input class="input-margins" type="text" placeholder="Add task.." [formControl]="control">
-    <div class="button-container">
-        <button class="pumpkin-flat-button" (click)="add.next(control.value);control.reset()">
-            <span>press me</span>
+    <input class="add-task--input-margins" type="text" placeholder="new task.." [formControl]="control">
+    <div class="add-task__button-container">
+        <button class="add-task__flat-button" (click)="control.value?add.next(control.value):'';control.reset()">
+            <span>add task</span>
         </button>
     </div>
 </div>

@@ -1,3 +1,14 @@
-<ul *ngFor="let task of tasks">
-    <task-item [task]="task" (toggle)="toggle.next($event)"></task-item>
-</ul>
+<div class="task-list">
+    <div class="task-list__container">
+        <div class="task-list__list-type1">
+            <ol>
+                <li  *ngFor="let task of tasks">
+                    <a href="#">
+                        <task-item [task]="task" (toggle)="toggle.next($event)"></task-item>
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
