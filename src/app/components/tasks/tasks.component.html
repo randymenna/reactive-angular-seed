@@ -1,6 +1,19 @@
 <div id="task" class="task__container">
     <div class="task__container--unloaded" *ngIf="(taskState$ | async)?.loading">
-        loading ...
+        <div class="spinner-circle">
+            <div class="spinner-circle1 spinner-child"></div>
+            <div class="spinner-circle2 spinner-child"></div>
+            <div class="spinner-circle3 spinner-child"></div>
+            <div class="spinner-circle4 spinner-child"></div>
+            <div class="spinner-circle5 spinner-child"></div>
+            <div class="spinner-circle6 spinner-child"></div>
+            <div class="spinner-circle7 spinner-child"></div>
+            <div class="spinner-circle8 spinner-child"></div>
+            <div class="spinner-circle9 spinner-child"></div>
+            <div class="spinner-circle10 spinner-child"></div>
+            <div class="spinner-circle11 spinner-child"></div>
+            <div class="spinner-circle12 spinner-child"></div>
+        </div>
     </div>
 
     <div *ngIf="!(taskState$ | async)?.loading" class="task__container--loaded">
