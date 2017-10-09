@@ -9,6 +9,6 @@ describe('angular-redux-starter App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Angular / Redux Starter');
+    expect(page.getParagraphText()).toEqual('Reactive Angular Seed');
   });
 });
